@@ -1,0 +1,198 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --p1: pink;
+    --p2: greenyellow;
+    --p3: blue;
+    --p4: black;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    background-color: #4b4b4b;
+    padding: 10px 0px 10px 50px;
+}
+
+.sorting {
+    display: flex;
+    padding: 10px;
+    background-color: #3d3d3d;;
+    column-gap: 10px;
+}
+
+.sorting .box {
+    width: 50px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.sorting .box:hover {
+    border: 2px solid white;
+}
+
+.sorting .box.p1 {
+    background-color: var(--p1);
+}
+
+.sorting .box.p2 {
+    background-color: var(--p2);
+}
+
+.sorting .box.p3 {
+    background-color: var(--p3);
+}
+
+.sorting .box.p4 {
+    background-color: var(--p4);
+}
+
+.actions {
+    display: flex;
+    background-color: #3d3d3d;
+    margin: 0px 30px;
+}
+
+.actions .box {
+    width: 50px;
+    height: 50px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.actions .box:hover {
+    background-color: green;
+}
+
+.search input {
+    width: 200px;
+    height: 50px;
+    background-color: white;
+    font-size: 18px;
+    padding: 0 15px;
+}
+
+.heading {
+    padding: 15px 0 0 30px;
+}
+
+.task-section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+.task-section .task {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 150px;
+    border: 1px solid #ccc;
+}
+
+.task-section .task .task-priority {
+    height: 10px;
+    background-color: blue;
+}
+
+.task-section .task .task-id {
+    height: 20px;
+    background-color: yellow;
+}
+
+.task-section .task .task-title {
+    display: flex;
+    flex-grow: 1;
+    padding: 10px;
+    background-color: orange;
+}
+
+.task [data-priority="p1"].task-priority {
+    background-color: var(--p1);
+}
+
+.task [data-priority="p2"].task-priority {
+    background-color: var(--p2);
+}
+
+.task [data-priority="p3"].task-priority {
+    background-color: var(--p3);
+}
+
+.task [data-priority="p4"].task-priority {
+    background-color: var(--p4);
+}
+
+.add-task-modal {
+    display: flex;
+    width: 600px;
+    height: 300px;
+    background-color: #ccc;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.add-task-modal .left-section {
+    display: flex;
+    flex-grow: 1;
+}
+
+.add-task-modal .left-section textarea {
+    display: flex;
+    flex-grow: 1;
+    padding: 10px;
+}
+
+.add-task-modal .right-section {
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+    padding: 10px;
+    row-gap: 10px;
+    justify-content: center;
+}
+
+.add-task-modal .right-section .box {
+    width: 100px;
+    height: 60px;
+}
+
+.add-task-modal .right-section .box:hover {
+    border: 2px solid white;
+}
+
+.add-task-modal .right-section .box.p1 {
+    background-color: var(--p1);
+}
+
+.add-task-modal .right-section .box.p2 {
+    background-color: var(--p2);
+}
+
+.add-task-modal .right-section .box.p3 {
+    background-color: var(--p3);
+}
+
+.add-task-modal .right-section .box.p4 {
+    background-color: var(--p4);
+}
+
+.add-task-modal .right-section .box.selected {
+    border: 2px solid red;
+}
+
+.hide {
+    display: none;
+}
